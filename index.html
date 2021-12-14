@@ -390,7 +390,7 @@
           <div class="apply-gd-right offset-lg-1 col-lg-6 mt-lg-0 mt-5">
             <div class="apply-form p-sm-5 p-4">
               <h5>Fill the form ,We'll get back soon!</h5>
-              <form id="submit-form" action="">
+              <form id="form-group" action="">
                 <div class="admission-form">
                   <div class="form-group">
                     <input name="FullName" type="text" class="form-control" placeholder="Full Name*" required="">
@@ -483,11 +483,11 @@
 
     <!-- form script -->
     <script>
-      $("#submit-form").submit((e)=>{
+      $("#form-group").submit((e)=>{
           e.preventDefault()
           $.ajax({
               url:"https://script.google.com/macros/s/AKfycbwXLmEjIbcReOQzFSUziTE07IQYsF_bQevCIkAdeu1gDvWKn70ZE9SEE-Fic8MAdwtQ/exec",
-              data:$("#submit-form").serialize(),
+              data:$("#form-group").serialize(),
               method:"post",
               success:function (response){
                   alert("Form submitted successfully")
